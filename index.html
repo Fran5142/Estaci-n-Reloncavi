@@ -250,7 +250,7 @@ function actualizarRosaAnimada(dir, spd){
 // Cargar datos de WeatherLink/Seno Reloncaví
 async function cargarDatos(){
   try{
-    const response = await fetch(`https://corsproxy.io/?https://www.weatherlink.com/embeddablePage/getData/2bc9e7ae099849478a8ce1e4c5128e6d`);
+    const response = await fetch(`https://meteorologia-api.salaspancho16.workers.dev/davis-reloncavi`);
     const datos = await response.json();
 
     document.getElementById('temp_actual').textContent = datos.temperature + ' °C';
@@ -287,3 +287,4 @@ L.marker([-41.4990, -72.9881]).addTo(map)
 </script>
 </body>
 </html>
+
